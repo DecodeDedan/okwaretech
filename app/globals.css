@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Colour tokens as RGB channels so Tailwind's /opacity modifiers work. */
+:root {
+  --paper: 245 244 240;
+  --surface: 255 255 255;
+  --ink: 15 20 19;
+  --muted: 88 96 94;
+  --line: 223 221 214;
+  --brand: 10 110 106;
+  --brand-ink: 7 80 77;
+  --brand-soft: 226 239 237;
+  color-scheme: light;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 88px;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+
+  h1,
+  h2 {
+    text-wrap: balance;
+  }
+
+  ::selection {
+    @apply bg-brand text-white;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand ring-offset-2 ring-offset-paper;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
+@layer components {
+  .page {
+    @apply mx-auto w-full max-w-page px-4 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[13px] text-muted;
+  }
+
+  .btn {
+    @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded px-5 text-[15px] font-semibold transition-[background-color,color,border-color,transform] duration-150 active:scale-[0.98];
+  }
+
+  .btn-primary {
+    @apply btn bg-ink text-paper hover:bg-brand-ink;
+  }
+
+  .btn-secondary {
+    @apply btn border border-line bg-surface text-ink hover:border-ink;
+  }
+
+  .link {
+    @apply underline decoration-line decoration-1 underline-offset-4 transition-colors duration-150 hover:decoration-brand;
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
