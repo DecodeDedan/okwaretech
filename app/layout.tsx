@@ -10,7 +10,7 @@ const sans = Geist({ subsets: ["latin"], weight: ["400", "600"], variable: "--fo
 const mono = Geist_Mono({ subsets: ["latin"], weight: ["400"], variable: "--font-mono", display: "swap" });
 
 const description =
-  "OkwareTech is a software development company building business systems, websites, mobile and desktop apps, integrations and platforms for growing businesses.";
+  "OkwareTech is a software development company serving businesses in Kenya, across Africa and beyond with business systems, websites, mobile and desktop apps, integrations and platforms.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -23,9 +23,12 @@ export const metadata: Metadata = {
   applicationName: site.name,
   keywords: [
     "software development company Kenya",
+    "software development company Africa",
+    "software development company worldwide",
     "business systems",
-    "website development Nairobi",
+    "website development Kenya",
     "mobile app development Kenya",
+    "mobile app development Africa",
     "OkwareTech",
   ],
   alternates: { canonical: "/" },
@@ -52,7 +55,8 @@ const organization = {
   logo: `${site.url}/brand/okwaretech-mark.svg`,
   email: site.email,
   description,
-  address: { "@type": "PostalAddress", addressLocality: "Nairobi", addressCountry: "KE" },
+  address: { "@type": "PostalAddress", addressCountry: "KE" },
+  areaServed: ["Kenya", "Africa", "Worldwide"],
   founder: [
     { "@type": "Person", name: site.founder.name, url: site.founder.linkedin },
     { "@type": "Person", name: site.cofounder.name, url: site.cofounder.linkedin },

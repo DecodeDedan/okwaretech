@@ -10,7 +10,7 @@ import { getCaseStudy } from "@/lib/work";
 export const metadata: Metadata = {
   title: "Software Development Services",
   description:
-    "Business systems, websites, mobile and desktop apps, integrations and blockchain platforms, designed and built by OkwareTech in Nairobi.",
+    "Business systems, websites, mobile and desktop apps, integrations and blockchain platforms, designed and built by OkwareTech for businesses in Kenya, Africa and beyond.",
   alternates: { canonical: "/services" },
 };
 

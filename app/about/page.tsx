@@ -10,7 +10,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About OkwareTech",
-  description: `${site.name} is a software company in Nairobi, Kenya, founded in ${site.founded} by ${site.founder.name} and ${site.cofounder.name}, building systems, websites and apps for businesses.`,
+  description: `${site.name} is a software company founded in ${site.founded} by ${site.founder.name} and ${site.cofounder.name}, serving businesses in Kenya, across Africa and beyond with systems, websites and apps.`,
   alternates: { canonical: "/about" },
 };
 
