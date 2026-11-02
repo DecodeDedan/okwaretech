@@ -4,7 +4,7 @@ import { BriefForm } from "@/components/contact/BriefForm";
 import { emailLink, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact OkwareTech",
   description: `Start a project with ${site.name} by email at ${site.email}.`,
   alternates: { canonical: "/contact" },
 };

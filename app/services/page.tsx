@@ -8,7 +8,7 @@ import { process, services } from "@/lib/services";
 import { getCaseStudy } from "@/lib/work";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Software Development Services",
   description:
     "Business systems, websites, mobile and desktop apps, integrations and blockchain platforms, designed and built by OkwareTech in Nairobi.",
   alternates: { canonical: "/services" },

@@ -9,7 +9,7 @@ import { InTheWorks } from "@/components/home/InTheWorks";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Company",
+  title: "About OkwareTech",
   description: `${site.name} is a software company in Nairobi, Kenya, founded in ${site.founded} by ${site.founder.name} and ${site.cofounder.name}, building systems, websites and apps for businesses.`,
   alternates: { canonical: "/about" },
 };

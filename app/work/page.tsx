@@ -4,7 +4,7 @@ import { WorkIndex } from "@/components/work/WorkIndex";
 import { CtaBand } from "@/components/CtaBand";
 
 export const metadata: Metadata = {
-  title: "Work",
+  title: "Our Work and Case Studies",
   description:
     "Projects by OkwareTech: Rasko Sweet Scent, Century Mabati, IThreeM, U-Download, GitOk, OHMS and RSON: business systems, websites, products and platforms.",
   alternates: { canonical: "/work" },

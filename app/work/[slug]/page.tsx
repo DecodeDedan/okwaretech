@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const study = getCaseStudy((await params).slug);
   if (!study) return {};
   return {
-    title: study.name,
+    title: `${study.name} Case Study`,
     description: study.summary,
     alternates: { canonical: `/work/${study.slug}` },
     openGraph: study.image ? { images: [{ url: study.image.src, alt: study.image.alt }] } : undefined,

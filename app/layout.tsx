@@ -10,12 +10,16 @@ const sans = Geist({ subsets: ["latin"], weight: ["400", "600"], variable: "--fo
 const mono = Geist_Mono({ subsets: ["latin"], weight: ["400"], variable: "--font-mono", display: "swap" });
 
 const description =
-  "OkwareTech builds software solutions for businesses: business systems, websites, mobile and desktop apps, integrations and platforms. Based in Nairobi, Kenya.";
+  "OkwareTech is a software development company building business systems, websites, mobile and desktop apps, integrations and platforms for growing businesses.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: `${site.name}: ${site.tagline}`, template: `%s: ${site.name}` },
   description,
+  category: "technology",
+  authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
+  publisher: site.name,
   applicationName: site.name,
   keywords: [
     "software development company Kenya",
@@ -25,8 +29,17 @@ export const metadata: Metadata = {
     "OkwareTech",
   ],
   alternates: { canonical: "/" },
-  openGraph: { type: "website", siteName: site.name, url: site.url, title: site.name, description, locale: "en_KE" },
+  openGraph: {
+    type: "website",
+    siteName: site.name,
+    url: site.url,
+    title: `${site.name}: ${site.tagline}`,
+    description,
+    locale: "en_KE",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: `${site.name}: ${site.tagline}` }],
+  },
   twitter: { card: "summary_large_image", title: site.name, description },
+  robots: { index: true, follow: true, "max-image-preview": "large" },
 };
 
 export const viewport: Viewport = { themeColor: "#F5F4F0", colorScheme: "light" };
@@ -47,6 +60,15 @@ const organization = {
   sameAs: [site.socials.github, site.socials.linkedin, site.socials.x],
 };
 
+const website = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: site.name,
+  url: site.url,
+  description,
+  publisher: { "@id": `${site.url}/#organization` },
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${sans.variable} ${mono.variable}`}>
@@ -54,7 +76,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           // JSON-LD from our own constants; no user input reaches this string.
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...organization, "@id": `${site.url}/#organization` }) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}
         />
         <Header />
         <main id="main">{children}</main>

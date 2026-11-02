@@ -8,6 +8,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
     priority: path === "" ? 1 : 0.8,
   }));
-  const cases = caseStudies.map((c) => ({ url: `${site.url}/work/${c.slug}`, changeFrequency: "yearly" as const, priority: 0.7 }));
+  const cases = caseStudies.map((c) => ({
+    url: `${site.url}/work/${c.slug}`,
+    changeFrequency: "yearly" as const,
+    priority: 0.7,
+    ...(c.image ? { images: [`${site.url}${c.image.src}`] } : {}),
+  }));
   return [...pages, ...cases];
 }
