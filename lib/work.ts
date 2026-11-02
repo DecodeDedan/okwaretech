@@ -35,7 +35,7 @@ export const caseStudies: readonly CaseStudy[] = [
     client: "Rasko Sweet Scent, Molo, Nakuru County",
     categories: ["Business systems", "Websites"],
     summary:
-      "One offline-first system that runs a eucalyptus foliage business — clients, orders, invoices, stock and suppliers — plus the public website.",
+      "One offline-first system that runs a eucalyptus foliage business, including clients, orders, invoices, stock and suppliers, plus the public website.",
     challenge:
       "Rasko grows, grades and bunches fresh-cut eucalyptus for florists, decorators and wholesalers. The business ran on notebooks and spreadsheets, on a farm where the connection comes and goes, and the owner could not see the true position of the business without being on site.",
     delivered: [
@@ -58,17 +58,17 @@ export const caseStudies: readonly CaseStudy[] = [
     client: "Century Mabati LTD, Nakuru",
     categories: ["Websites"],
     summary:
-      "The website for a Nakuru roofing-sheet manufacturer: eight roof profiles shown on the sheet, seven colours, and a quote form that lands in WhatsApp.",
+      "The website for a Nakuru roofing-sheet manufacturer: eight roof profiles shown on the sheet, seven colours, and a quote form that sends an enquiry.",
     challenge:
       "Century Mabati rolls tile, box-profile, corrugated and stone-coated roofing on its own machines, cut to the length a roof needs. Buyers compare profiles and colours on their phones before they call, and orders hinge on exact sheet lengths and counts that get lost in calls.",
     delivered: [
-      "A product walkthrough of all eight profiles — C-868, C-Wave, C-800, C-840, Corrugated, Box Profile IT-5 and two stone-coated tiles — animated on the sheet as you scroll",
+      "A product walkthrough of all eight profiles, including C-868, C-Wave, C-800, C-840, Corrugated, Box Profile IT-5 and two stone-coated tiles, animated on the sheet as you scroll",
       "A colour selector across the seven colours, with a live sheet-length display",
-      "A quote form for product, colour, sheet length, number of sheets and delivery location that opens as a ready WhatsApp message to sales",
+      "A quote form for product, colour, sheet length, number of sheets and delivery location that prepares a ready enquiry for sales",
       "Factory, past projects and accessories sections, plus click-to-call, directions to the yard and a light, dark and system theme",
     ],
     outcome:
-      "Customers arrive at the sales team with the profile, colour, length and quantity already decided, in a WhatsApp message instead of a back-and-forth call.",
+      "Customers arrive at the sales team with the profile, colour, length and quantity already decided, in a clear enquiry instead of a back-and-forth call.",
     stack: ["Vite", "GSAP", "ScrollTrigger", "Vercel"],
     platforms: "Web",
     image: { src: "/work/century-mabati.jpg", alt: "The Century Mabati website: Build with the best" },

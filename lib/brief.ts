@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-// The contact page builds a project brief and hands it to WhatsApp or email.
+// The contact page builds a project brief and hands it to email.
 // There is no server: the brief leaves the browser only through the channel the visitor picks.
 
 export const PROJECT_TYPES = [

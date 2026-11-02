@@ -6,7 +6,7 @@ import { CtaBand } from "@/components/CtaBand";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Projects by OkwareTech: Rasko Sweet Scent, Century Mabati, IThreeM, U-Download, GitOk, OHMS and RSON — business systems, websites, products and platforms.",
+    "Projects by OkwareTech: Rasko Sweet Scent, Century Mabati, IThreeM, U-Download, GitOk, OHMS and RSON: business systems, websites, products and platforms.",
   alternates: { canonical: "/work" },
 };
 

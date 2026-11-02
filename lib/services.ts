@@ -20,7 +20,7 @@ export const services: readonly Service[] = [
     title: "Websites",
     summary:
       "Fast company websites that explain what you sell and turn a visit into a call, a message or an order.",
-    includes: ["Design and build", "Product and service pages", "WhatsApp and email enquiries", "Search-ready metadata"],
+    includes: ["Design and build", "Product and service pages", "Email enquiries", "Search-ready metadata"],
     proof: "century-mabati",
   },
   {
@@ -35,7 +35,7 @@ export const services: readonly Service[] = [
     id: "integrations",
     title: "Integrations and automation",
     summary:
-      "Connect the tools you already pay for — payments, M-Pesa, CRMs, spreadsheets — so data moves without retyping.",
+      "Connect the tools you already pay for, including payments, M-Pesa, CRMs and spreadsheets, so data moves without retyping.",
     includes: ["APIs and webhooks", "Payment integrations", "Workflow automation", "Data migration"],
     proof: "gitok",
   },

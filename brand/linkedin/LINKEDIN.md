@@ -17,7 +17,6 @@ Files in this folder:
 | Organization type | Privately held |
 | Founded | 2024 |
 | Headquarters | Nairobi, Kenya |
-| Phone | +254 704 860 552 |
 | Email | info@okwaretech.com |
 
 ## Tagline (102/120)
@@ -28,14 +27,14 @@ OkwareTech is a software company in Nairobi, Kenya. Since 2024 we have designed,
 
 What we build
 • Business systems: orders, invoicing, stock, clients and staff in one place, offline-first where the network isn't
-• Websites that turn a visit into a call, a WhatsApp message or an order
+• Websites that turn a visit into an enquiry or an order
 • Mobile and desktop apps for Android, Windows, macOS and Linux
 • Integrations and automation: payments, M-Pesa, CRMs and the tools you already use
 • Platforms and blockchain: verifiable records, AI agents and decentralised applications
 
 Recent work
 • Rasko Sweet Scent: an offline-first business app for Windows and Android that runs a eucalyptus foliage farm, plus its website
-• Century Mabati: a website for a Nakuru roofing manufacturer with a quote form that lands in WhatsApp
+• Century Mabati: a website for a Nakuru roofing manufacturer with a quote form that lands with sales
 • OHMS: an AI agent platform, 2nd place in the WCHL Africa regional round
 • U-Download (1,500+ users) and GitOk (2,000+ developers in 40+ countries)
 
@@ -45,7 +44,7 @@ How we work: you talk directly to the engineer building your system, see working
 
 In the works: PolyDomain, a next-generation domain registration platform.
 
-Start a project: info@okwaretech.com · WhatsApp +254 704 860 552 · okwaretech.com
+Start a project: info@okwaretech.com · okwaretech.com
 
 ## Specialties (18/20, one per entry)
 - Custom software development
@@ -77,7 +76,7 @@ Since 2024 we've been building the software businesses run on, from Nairobi.
 
 A few things we've shipped:
 → An offline-first business app that runs a eucalyptus farm in Molo, with no signal required
-→ A roofing manufacturer's website where customers pick profile, colour and sheet length, then send the order on WhatsApp
+→ A roofing manufacturer's website where customers pick profile, colour and sheet length, then send the order to sales
 → Open-source tools used by thousands of developers in 40+ countries
 
 What we build: business systems, websites, mobile and desktop apps, and integrations like M-Pesa.

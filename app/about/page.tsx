@@ -42,7 +42,7 @@ export default function AboutPage() {
       <PageIntro
         eyebrow="Company"
         title="A software company for businesses that run on more than spreadsheets."
-        lede={`${site.name} designs, builds and supports custom software for companies in Kenya and beyond. We take on client systems and websites, and we build our own products and open-source tools — which is how we keep our engineering sharp.`}
+        lede={`${site.name} designs, builds and supports custom software for companies in Kenya and beyond. We take on client systems and websites, and we build our own products and open-source tools, which is how we keep our engineering sharp.`}
       />
 
       <section aria-labelledby="mark-heading" className="page grid items-center gap-10 border-y border-line py-16 md:grid-cols-[auto_1fr] md:gap-16">
@@ -53,7 +53,7 @@ export default function AboutPage() {
           </h2>
           <p className="mt-3 max-w-[60ch] text-lg leading-relaxed text-muted">
             The open &ldquo;O&rdquo; is your business as it stands. The teal module is the software we build to fit the gap
-            — made to the exact shape of the opening, not bought off a shelf.
+            Made to the exact shape of the opening, not bought off a shelf.
           </p>
           <p className="eyebrow mt-4 tabular">
             Running since {site.founded} · {clientWork} client projects · {ownWork} products and open-source tools ·{" "}

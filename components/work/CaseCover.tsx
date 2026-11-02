@@ -8,7 +8,7 @@ interface CaseCoverProps {
   className?: string;
 }
 
-// The project screenshot, or for work without one, a typeset cover — never a stock photo.
+// The project screenshot, or for work without one, a typeset cover. Never a stock photo.
 export const CaseCover = ({ study, sizes, priority = false, className = "" }: CaseCoverProps) => (
   <div className={`relative overflow-hidden rounded bg-surface ${className}`}>
     {study.image ? (

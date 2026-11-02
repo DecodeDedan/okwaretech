@@ -1,6 +1,6 @@
 import { LogoMark } from "@/components/Logo";
 import { inTheWorks } from "@/lib/openSource";
-import { emailLink, whatsappLink } from "@/lib/site";
+import { emailLink } from "@/lib/site";
 
 const NOTIFY = `Hello OkwareTech, please let me know when ${inTheWorks.name} launches.`;
 
@@ -17,14 +17,6 @@ export const InTheWorks = () => (
         </h2>
         <p className="mt-5 max-w-[52ch] text-lg leading-relaxed text-paper/80">{inTheWorks.summary}</p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <a
-            href={whatsappLink(NOTIFY)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn bg-paper text-ink hover:bg-[#CFE5E1]"
-          >
-            Notify me on WhatsApp
-          </a>
           <a href={emailLink(NOTIFY, `${inTheWorks.name} launch`)} className="btn border border-paper/30 text-paper hover:border-paper">
             Notify me by email
           </a>

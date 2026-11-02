@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest";
 import { composeBrief, validateBrief, MESSAGE_MAX } from "./brief";
 import { caseStudies, filterByCategory, getCaseStudy, nextCaseStudy } from "./work";
-import { emailLink, formatPhone, whatsappLink } from "./site";
+import { emailLink } from "./site";
 
 const valid = {
   name: "Jane Wanjiku",
@@ -55,19 +55,12 @@ describe("composeBrief", () => {
 });
 
 describe("contact links", () => {
-  test("whatsapp link uses digits only and encodes the text", () => {
-    expect(whatsappLink("a b&c")).toBe("https://wa.me/254704860552?text=a%20b%26c");
-  });
-
   test("email link encodes subject and body", () => {
     expect(emailLink("hi there")).toBe(
       "mailto:info@okwaretech.com?subject=Project%20enquiry%20via%20okwaretech.com&body=hi%20there",
     );
   });
 
-  test("formats a Kenyan number in groups", () => {
-    expect(formatPhone("+254704860552")).toBe("+254 704 860 552");
-  });
 });
 
 describe("work data", () => {

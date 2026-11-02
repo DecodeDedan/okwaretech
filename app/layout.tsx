@@ -14,7 +14,7 @@ const description =
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: `${site.name} — ${site.tagline}`, template: `%s — ${site.name}` },
+  title: { default: `${site.name}: ${site.tagline}`, template: `%s: ${site.name}` },
   description,
   applicationName: site.name,
   keywords: [
@@ -38,7 +38,6 @@ const organization = {
   url: site.url,
   logo: `${site.url}/brand/okwaretech-mark.svg`,
   email: site.email,
-  telephone: site.whatsapp,
   description,
   address: { "@type": "PostalAddress", addressLocality: "Nairobi", addressCountry: "KE" },
   founder: [

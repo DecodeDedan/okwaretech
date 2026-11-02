@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
-import { emailLink, formatPhone, nav, site, whatsappLink } from "@/lib/site";
+import { emailLink, nav, site } from "@/lib/site";
 
 export const Footer = () => (
   <footer className="mt-32 border-t border-line bg-surface">
@@ -8,7 +8,7 @@ export const Footer = () => (
       <div>
         <Logo />
         <p className="mt-4 max-w-[36ch] text-muted">
-          We build the software businesses run on — systems, websites and apps — from {site.location}, since{" "}
+          We build the software businesses run on: systems, websites and apps, from {site.location}, since{" "}
           {site.founded}.
         </p>
       </div>
@@ -30,11 +30,6 @@ export const Footer = () => (
           <li>
             <a href={emailLink()} className="link">
               {site.email}
-            </a>
-          </li>
-          <li>
-            <a href={whatsappLink("Hello OkwareTech, I'd like to talk about a project.")} className="link tabular" rel="noopener noreferrer" target="_blank">
-              WhatsApp {formatPhone(site.whatsapp)}
             </a>
           </li>
           <li>

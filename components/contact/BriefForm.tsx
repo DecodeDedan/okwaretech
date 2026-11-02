@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState, type FormEvent, type MouseEvent } from "react";
+import { useId, useState, type FormEvent } from "react";
 import {
   BUDGETS,
   MESSAGE_MAX,
@@ -11,10 +11,9 @@ import {
   type BriefErrors,
   type BriefInput,
 } from "@/lib/brief";
-import { emailLink, whatsappLink } from "@/lib/site";
+import { emailLink } from "@/lib/site";
 
-type Channel = "whatsapp" | "email";
-type Status = { kind: "idle" } | { kind: "sent"; channel: Channel } | { kind: "invalid"; count: number };
+type Status = { kind: "idle" } | { kind: "sent" } | { kind: "invalid"; count: number };
 
 // Choice fields start unanswered; validation rejects the empty string with a readable message.
 interface FormValues {
@@ -84,7 +83,7 @@ export const BriefForm = () => {
     });
   };
 
-  const send = (channel: Channel) => {
+  const send = () => {
     // The schema narrows the free strings to the allowed options.
     const result = validateBrief(values as BriefInput);
     if (!result.ok) {
@@ -95,18 +94,13 @@ export const BriefForm = () => {
       return;
     }
     const text = composeBrief(result.brief);
-    if (channel === "whatsapp") window.open(whatsappLink(text), "_blank", "noopener,noreferrer");
-    else window.location.href = emailLink(text, `Project brief: ${result.brief.projectType}`);
-    setStatus({ kind: "sent", channel });
+    window.location.href = emailLink(text, `Project brief: ${result.brief.projectType}`);
+    setStatus({ kind: "sent" });
   };
 
   const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    send("whatsapp");
-  };
-  const onEmail = (event: MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-    send("email");
+    send();
   };
 
   const textField = (name: "name" | "company", label: string, autoComplete: string, maxLength: number, optional = false) => {
@@ -183,9 +177,6 @@ export const BriefForm = () => {
 
       <div className="flex flex-col gap-3 border-t border-line pt-8 sm:flex-row">
         <button type="submit" className="btn-primary">
-          Send brief on WhatsApp
-        </button>
-        <button type="button" onClick={onEmail} className="btn-secondary">
           Send brief by email
         </button>
       </div>
@@ -198,8 +189,7 @@ export const BriefForm = () => {
         )}
         {status.kind === "sent" && (
           <p className="rounded border border-brand/30 bg-brand-soft px-4 py-3 text-brand-ink">
-            Your brief is ready in {status.channel === "whatsapp" ? "WhatsApp" : "your email app"} — press send there and
-            we&rsquo;ll reply within one working day. If nothing opened, use the direct contacts on this page.
+            Your brief is ready in your email app. Press send there and we&rsquo;ll reply within one working day. If nothing opened, use the email address on this page.
           </p>
         )}
       </div>

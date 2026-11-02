@@ -24,7 +24,7 @@ export default function HomePage() {
           </h1>
           <p className="mt-6 max-w-[54ch] text-lg leading-relaxed text-muted md:text-xl">
             Since {site.founded}, OkwareTech has designed and built business systems, websites and apps for
-            companies — offline-first where the network isn&rsquo;t, and supported long after launch.
+            companies, offline-first where the network isn&rsquo;t, and supported long after launch.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <Link href="/contact" className="btn-primary">
@@ -59,7 +59,7 @@ export default function HomePage() {
                   {c.metric!.value}
                 </span>
                 <span className="mt-2 block text-muted">
-                  {c.metric!.label} —{" "}
+                  {c.metric!.label}:{" "}
                   <Link href={`/work/${c.slug}`} className="link text-ink">
                     {c.name}
                   </Link>

@@ -20,7 +20,7 @@ export default function ServicesPage() {
       <PageIntro
         eyebrow="Services"
         title="Software built around how your business works."
-        lede="We start from the work your people do every day and build the system that makes it faster, safer and visible — then we stay to run it."
+        lede="We start from the work your people do every day and build the system that makes it faster, safer and visible, then we stay to run it."
       />
 
       <div className="page space-y-6 pb-24">

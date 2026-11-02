@@ -1,4 +1,4 @@
-// The OkwareTech mark: an "O" opened on one side with a module slotting into it —
+// The OkwareTech mark: an "O" opened on one side with a module slotting into it.
 // the piece of software a business is missing. Geometry is shared with app/icon.svg,
 // public/brand/*.svg and the 3D hero (components/hero/scene.ts); change them together.
 

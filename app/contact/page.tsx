@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/PageIntro";
 import { BriefForm } from "@/components/contact/BriefForm";
-import { emailLink, formatPhone, site, whatsappLink } from "@/lib/site";
+import { emailLink, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Start a project with ${site.name}: WhatsApp ${formatPhone(site.whatsapp)} or email ${site.email}.`,
+  description: `Start a project with ${site.name} by email at ${site.email}.`,
   alternates: { canonical: "/contact" },
 };
 
@@ -16,12 +16,6 @@ const channels = [
     href: emailLink(),
     external: false,
   },
-  {
-    label: "WhatsApp or call",
-    value: formatPhone(site.whatsapp),
-    href: whatsappLink("Hello OkwareTech, I'd like to talk about a project."),
-    external: true,
-  },
   { label: "Studio", value: site.location, href: undefined, external: false },
 ] as const;
 
@@ -31,7 +25,7 @@ export default function ContactPage() {
       <PageIntro
         eyebrow="Contact"
         title="Start a project."
-        lede="Answer five quick questions and we'll turn them into a brief you send on WhatsApp or by email. Nothing is stored on this site."
+        lede="Answer five quick questions and we'll turn them into a brief you send by email. Nothing is stored on this site."
       />
       <div className="page grid gap-14 pb-12 lg:grid-cols-[minmax(0,8fr)_minmax(0,4fr)]">
         <BriefForm />
