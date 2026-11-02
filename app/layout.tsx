@@ -41,7 +41,10 @@ const organization = {
   telephone: site.whatsapp,
   description,
   address: { "@type": "PostalAddress", addressLocality: "Nairobi", addressCountry: "KE" },
-  founder: { "@type": "Person", name: site.founder.name, url: site.founder.portfolio },
+  founder: [
+    { "@type": "Person", name: site.founder.name, url: site.founder.linkedin },
+    { "@type": "Person", name: site.cofounder.name, url: site.cofounder.linkedin },
+  ],
   sameAs: [site.socials.github, site.socials.linkedin, site.socials.x],
 };
 

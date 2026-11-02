@@ -55,10 +55,11 @@ export const Footer = () => (
         © {new Date().getFullYear()} {site.legalName}. {site.location}.
       </p>
       <p>
-        Founded by{" "}
+        Co-founded by{" "}
         <a href={site.founder.portfolio} className="link">
           {site.founder.name}
-        </a>
+        </a>{" "}
+        &amp; {site.cofounder.name}
       </p>
     </div>
   </footer>

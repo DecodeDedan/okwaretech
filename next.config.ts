@@ -3,15 +3,6 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
-  // The founder's portfolio used to live on this domain; its pages now live on the subdomain.
-  async redirects() {
-    const moved = ["projects", "resume", "experience", "skills", "certificates", "achievements", "form"];
-    return moved.map((page) => ({
-      source: `/${page}`,
-      destination: `https://dedan.okwaretech.com/${page}`,
-      permanent: true,
-    }));
-  },
   async headers() {
     return [
       {
