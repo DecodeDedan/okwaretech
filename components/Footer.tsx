@@ -32,16 +32,6 @@ export const Footer = () => (
               {site.email}
             </a>
           </li>
-          <li>
-            <a href={site.socials.github} className="link" rel="noopener noreferrer" target="_blank">
-              GitHub
-            </a>
-          </li>
-          <li>
-            <a href={site.socials.linkedin} className="link" rel="noopener noreferrer" target="_blank">
-              LinkedIn
-            </a>
-          </li>
         </ul>
       </div>
     </div>

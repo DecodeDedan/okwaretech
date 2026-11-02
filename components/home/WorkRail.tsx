@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CaseCover } from "@/components/work/CaseCover";
@@ -15,7 +15,7 @@ export const WorkRail = ({ studies }: { studies: readonly CaseStudy[] }) => {
   const track = useRef<HTMLOListElement>(null);
   const progress = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!section.current || !viewport.current || !track.current || !progress.current) return;
     gsap.registerPlugin(ScrollTrigger);
     const mm = gsap.matchMedia();
