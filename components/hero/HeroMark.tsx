@@ -17,17 +17,32 @@ export const HeroMark = () => {
     let cancelled = false;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    const load = () =>
+    const canUseWebGL = () => {
+      try {
+        const probe = document.createElement("canvas");
+        return Boolean(probe.getContext("webgl2") ?? probe.getContext("webgl"));
+      } catch {
+        return false;
+      }
+    };
+
+    const load = () => {
+      if (!canUseWebGL()) {
+        setFailed(true);
+        return;
+      }
+
       import("./scene")
         .then(({ mountScene }) => {
           if (cancelled) return;
           dispose = mountScene(canvas, { reducedMotion, onFirstFrame: () => setReady(true) });
         })
         .catch((error: unknown) => {
-          // No WebGL or a failed chunk: the static mark stays, which is a complete hero.
+          // A failed chunk or renderer keeps the static mark as the complete hero.
           console.warn("[hero] 3D scene unavailable, showing static mark", error);
           setFailed(true);
         });
+    };
 
     const idle = window.requestIdleCallback
       ? window.requestIdleCallback(load, { timeout: 1500 })
